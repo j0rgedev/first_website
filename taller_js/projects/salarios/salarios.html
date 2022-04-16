@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="salarios.css">
+    <title>Análisis Salarial</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Jorge A.</h1>
+            <div class="nav_items">
+                <a href="/taller_js/index.html" class="is_active">Home</a>
+                <a href="/taller_js/projects/figuras_geometricas/figuras.html">Taller 1</a>
+                <a href="/taller_js/projects/calcular_descuentos/descuentos.html">Taller 2</a>
+                <a href="/taller_js/projects/conceptos_estadisticos/conceptos.html">Taller 3</a>
+                <a href="./salarios.html">Taller 4</a>
+            </div>
+
+            <button class="burguer_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <section>
+        <div class="titles">
+            <h2>Datos precargados</h2>
+            <h2>Calculos</h2>
+        </div>
+        <div class="section_container">
+            <div class="left">
+                <div class="datos">
+                    <h3>Nombres</h3>
+                    <div class="nombres"></div>
+                </div>
+                <div class="datos">
+                    <h3>Salarios</h3>
+                    <div class="salarios"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="calculos">
+                    <h3>Mediana General</h3>
+                    <button type="button" class="btn" id="btn1">Calcular</button>
+                </div>
+                <div class="calculos">
+                    <h3>Mediana Top 10</h3>
+                    <button type="button" class="btn"  id="btn2">Calcular</button>
+                </div>
+                <div class="resultado" id="result">
+                    <p id="p_result"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/taller_js/main.js" type="module"></script>
+    <script src="./salarios.js" type="module"></script>
+    <script src="./analisis.js" type="module"></script>
+    <script src="./events.js" type="module"></script>
+</body>
+</html>

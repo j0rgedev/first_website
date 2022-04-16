@@ -1,0 +1,317 @@
+:root{
+    --background: rgb(1,17,33);
+    --yellow: #FFB00D;
+    --coral :#FE6F61;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 16px 32px;
+    color: whitesmoke;
+}
+
+.container h1{
+    color: rgb(203, 203, 203);
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.burguer_btn{
+    display: none;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.burguer_btn span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background-color: white;
+    border-radius: 6px;
+    z-index: 1;
+
+    transform-origin: 0 0;
+    transition: 0.4s;
+}
+
+.burguer_btn:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: var(--yellow);
+}
+
+.burguer_btn.is_active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.burguer_btn.is_active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+
+.burguer_btn.is_active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.burguer_btn.is_active:hover span{
+    background-color: var(--yellow);
+}
+
+.nav_items{
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+
+}
+
+.nav_items a {
+    position: relative;
+    color: rgb(203, 203, 203);
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+}
+
+.nav_items a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--yellow);
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.container h1:after{
+    content: "";
+    position: absolute;
+    background-color: var(--yellow);
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+.container h1:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.container h1:hover:after{
+    width: 100%;
+}
+
+.nav_items a:hover{
+    color: white;
+}
+
+.nav_items a:hover:after{
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 24px;
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+section p{
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.figuras{
+    border: 3px solid var(--coral);
+    border-radius: 14px ;
+    width: 20%;
+    height: 400px;
+    overflow: hidden;
+    padding: 1.75rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 24px;
+    font-size: 18px;
+}
+
+form label{
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 250;
+    margin-bottom: 8px;
+}
+
+form input{
+    border: 1px solid #fe956c;
+    border-radius: 10px;
+    height: 25px;
+    margin-bottom: 22px;
+    padding-left: 8px;
+    color: white;
+}
+
+form input::placeholder{
+    color:whitesmoke;
+    opacity: 0.6;
+}
+
+form input:focus{
+    outline: none;
+    border: 1px solid #fab89e;
+}
+
+form button{
+    border: 1px solid #fe956c;
+    border-radius: 2px;
+    color: #f7af93;
+    margin-bottom: 20px;
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: 0.8s;
+}
+
+form button:hover{
+    color: white;
+}
+
+.alert{
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.alert1{
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.alert2{
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.text{
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px){
+    .figuras{
+        height: 300px;
+    }
+
+    form button{
+        height: 40px;
+    }
+
+    .burguer_btn{
+        display: block;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav_items{
+        position: absolute;
+        background-color: #FFB00D;
+        right: 0px;
+        height: 96vh;
+        top: 73.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav_items a{
+        margin-top: 32px;
+        background-color: transparent;
+        color: var(--background);
+    }
+
+    .nav_items a:after{
+        background-color: var(--background);
+    }
+
+    .nav_items a:hover{
+        color: rgb(1,17,33);;
+    }
+    
+    img{
+        display: none;
+    }  
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="descuentos.css">
+    <title>¡Calcula tu descuento!</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Jorge A.</h1>
+            <div class="nav_items">
+                <a href="/taller_js/index.html" class="is_active">Home</a>
+                <a href="/taller_js/projects/figuras_geometricas/figuras.html">Taller 1</a>
+                <a href="./descuentos.html">Taller 2</a>
+                <a href="/taller_js/projects/conceptos_estadisticos/conceptos.html">Taller 3</a>
+                <a href="/taller_js/projects/salarios/salarios.html">Taller 4</a>
+            </div>
+
+            <button class="burguer_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <h2>Porcentajes y descuentos</h2>
+    <section>
+        <div class="section_container" id="ct">
+            <div>
+                <label for="price">Precio</label>
+                <input type="text" id="price">
+            </div>
+            <div>
+                <label for="percent">Descuento</label>
+                <input type="text" id="percent">
+            </div>
+            <button type="button" id="desc_btn">Calcular Descuento</button>
+            <textarea readonly id="final"></textarea>
+        </div>
+    </section>
+    <script src="./descuentos.js" type="module"></script>
+    <script src="/taller_js/main.js"></script>
+</body>
+</html>
